@@ -20,7 +20,9 @@ const onChatSubmitted = (sock) => (e) => {
 (() => {
     //log('welcome');
 
-    const sock = io();
+    //const sock = io();
+    const sock = io('http://192.168.0.125:8080');// home internet
+
 
     sock.on('message', log);
 
