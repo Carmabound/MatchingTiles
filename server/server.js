@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 io.on('connection', (sock) => {
-    sock.emit('message', 'You are connected');
+    sock.emit('message', 'Connected');
 
     sock.on('message', (text) => io.emit('message', text));
 });
