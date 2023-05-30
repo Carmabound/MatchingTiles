@@ -1,2 +1,2 @@
-# apcs-web-game
-real time multiplayer web game "matching tiles" (the memory game)
+# Matching Tiles
+singleplayer web game "matching tiles" (the memory game)
