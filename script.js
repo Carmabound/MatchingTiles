@@ -44,7 +44,7 @@ const timeGenerator = () => {
     //format time before displaying
     let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
     let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-    timeValue.innerHTML = `<span>Time:</span>${minutesValue} : ${secondsValue}`;
+    timeValue.innerHTML = `<span>Time: </span>${minutesValue} : ${secondsValue}`;
 };
 
 //for calculating moves
@@ -153,7 +153,8 @@ const matrixGenerator = (cardValues, size = 4) => {
 //start game
 startButton.addEventListener("click", () => {
     movesCount = 0;
-    time = 0;
+    seconds = 0;
+    minutes = 0;
     //controls and buttons visibility
     controls.classList.add("hide");
     stopButton.classList.remove("hide");
