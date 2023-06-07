@@ -25,7 +25,7 @@ const items = [
     { name: "pineapple", image: "img/pineapple.png" },
     { name: "watermelon", image: "img/watermelon.png" },
 ];
-
+/*
 //initial time
 let seconds = 0,
     minutes = 0;
@@ -52,7 +52,7 @@ const movesCounter = () => {
     movesCount += 1;
     moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
 }
-
+*/
 //pick random objects from items array
 const generateRandom = (size = 4) => {
     //temporary array
@@ -114,7 +114,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                 }
                 else {
                     //increment moves since user selected second card
-                    movesCounter();
+                    //movesCounter();
                     //secondcard and value
                     secondCard = card;
                     let secondCardValue = card.getAttribute("data-card-value");
@@ -129,8 +129,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                         //check if wincount == half of cardvalues
                         if (winCount == Math.floor(cardValues.length / 2)) {
                             result.innerHTML = `<h2>You Won!</h2>
-                            
-                        <h4>Moves: ${movesCount}</h4>`;
+<h4> </h4>`;
                             stopGame();
                         }
                     } else {
@@ -160,9 +159,9 @@ startButton.addEventListener("click", () => {
     stopButton.classList.remove("hide");
     startButton.classList.add("hide");
     //start timer
-    interval = setInterval(timeGenerator, 1000);
+    /*interval = setInterval(timeGenerator, 1000);
     //initial moves
-    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;*/
     initializer();
 });
 
